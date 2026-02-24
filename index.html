@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résilience Digitale — L'Humain au cœur du Code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0f172a',
+            accent: '#3b82f6',
+            accentLight: '#60a5fa',
+            accentDeep: '#2563eb',
+            accentViolet: '#8b5cf6',
+            cyan: '#06b6d4',
+            teal: '#14b8a6',
+            amber: '#f59e0b',
+            emerald: '#10b981',
+            rose: '#f43f5e',
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-dark text-slate-100 font-sans antialiased">
+  <!-- Theme toggle -->
+  <button id="theme-toggle" class="fixed top-4 left-4 z-50 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900/80 text-slate-200 border border-slate-600 shadow-lg text-xs md:text-sm hover:bg-slate-800/90 transition-colors" type="button" aria-label="Basculer le thème">
+    <span id="theme-toggle-icon">🌙</span>
+    <span id="theme-toggle-label" class="hidden md:inline">Mode sombre</span>
+  </button>
+
+  <!-- Navigation latérale numérotée -->
+  <nav id="nav" class="fixed left-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2" aria-label="Navigation des sections">
+    <a href="#titre" class="nav-link group flex items-center gap-2 rounded-full px-2 py-1 text-xs md:text-sm text-slate-300 hover:text-white" data-section="titre">
+      <span class="nav-dot flex items-center justify-center w-7 h-7 rounded-full border border-slate-500 bg-slate-900 text-[10px] font-semibold">01</span>
+      <span class="nav-label hidden md:inline">Titre</span>
+    </a>
+    <a href="#introduction" class="nav-link group flex items-center gap-2 rounded-full px-2 py-1 text-xs md:text-sm text-slate-300 hover:text-white" data-section="introduction">
+      <span class="nav-dot flex items-center justify-center w-7 h-7 rounded-full border border-slate-500 bg-slate-900 text-[10px] font-semibold">02</span>
+      <span class="nav-label hidden md:inline">Introduction</span>
+    </a>
+    <a href="#sondage" class="nav-link group flex items-center gap-2 rounded-full px-2 py-1 text-xs md:text-sm text-slate-300 hover:text-white" data-section="sondage">
+      <span class="nav-dot flex items-center justify-center w-7 h-7 rounded-full border border-slate-500 bg-slate-900 text-[10px] font-semibold">03</span>
+      <span class="nav-label hidden md:inline">Sondage</span>
+    </a>
+    <a href="#courbe" class="nav-link group flex items-center gap-2 rounded-full px-2 py-1 text-xs md:text-sm text-slate-300 hover:text-white" data-section="courbe">
+      <span class="nav-dot flex items-center justify-center w-7 h-7 rounded-full border border-slate-500 bg-slate-900 text-[10px] font-semibold">04</span>
+      <span class="nav-label hidden md:inline">Courbe</span>
+    </a>
+    <a href="#causes" class="nav-link group flex items-center gap-2 rounded-full px-2 py-1 text-xs md:text-sm text-slate-300 hover:text-white" data-section="causes">
+      <span class="nav-dot flex items-center justify-center w-7 h-7 rounded-full border border-slate-500 bg-slate-900 text-[10px] font-semibold">05</span>
+      <span class="nav-label hidden md:inline">Causes</span>
+    </a>
+    <a href="#guide" class="nav-link group flex items-center gap-2 rounded-full px-2 py-1 text-xs md:text-sm text-slate-300 hover:text-white" data-section="guide">
+      <span class="nav-dot flex items-center justify-center w-7 h-7 rounded-full border border-slate-500 bg-slate-900 text-[10px] font-semibold">06</span>
+      <span class="nav-label hidden md:inline">Management</span>
+    </a>
+    <a href="#conclusion" class="nav-link group flex items-center gap-2 rounded-full px-2 py-1 text-xs md:text-sm text-slate-300 hover:text-white" data-section="conclusion">
+      <span class="nav-dot flex items-center justify-center w-7 h-7 rounded-full border border-slate-500 bg-slate-900 text-[10px] font-semibold">07</span>
+      <span class="nav-label hidden md:inline">Conclusion</span>
+    </a>
+  </nav>
+
+  <main>
+    <!-- Section 0 : Titre -->
+    <section id="titre" class="section relative min-h-screen flex flex-col justify-center items-center px-8 py-20 pb-28 bg-gradient-to-br from-dark via-slate-900 via-40% to-accentViolet/30">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(59,130,246,0.15),transparent)] pointer-events-none" aria-hidden="true"></div>
+      <div class="reveal-scale max-w-4xl mx-auto text-center relative z-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-3">
+          Résistances face aux changements digitaux
+        </h1>
+        <p class="text-xl md:text-2xl text-accentLight font-semibold mb-2">Comprendre la résistance digitale</p>
+        <p class="text-slate-500 text-md mb-12">L'Humain au cœur du Code</p>
+        <div class="text-slate-400 space-y-2 mb-4">
+          <p class="text-base">Membres du groupe : <span class="text-slate-300 font-medium"> <br>  Barraq Louay <br> Ben Mahfoudh Fedi <br>  Kadri Iheb <br>  Ben Slimene Wael <br>  Majdoub Maher</span></p>
+          <p class="text-base">Classe : <span class="text-slate-300 font-medium"><br> 1 ING 1</span></p>
+        </div>
+      </div>
+      <div class="section-nav">
+        <span></span>
+        <a href="#introduction" class="btn-section">Suivant →</a>
+      </div>
+    </section>
+
+    <!-- Section 1 : Introduction -->
+    <section id="introduction" class="section relative min-h-screen flex flex-col justify-center px-8 md:px-16 py-20 pb-28 bg-dark">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="reveal text-3xl md:text-5xl font-bold text-center mb-2">Introduction de la digitalisation</h2>
+        <p class="reveal text-slate-500 text-center text-lg mb-10">Les deux paliers de la transformation : numérisation VS digitalisation.</p>
+        <p class="reveal-left text-slate-300 text-lg mb-10 text-center">
+          L'enjeu du changement digital repose pour une large part sur le facteur humain : <strong class="text-accentLight">environ 80 % relèvent de la dimension psychologique</strong>, 20 % de la dimension technique.
+        </p>
+        <div class="reveal overflow-x-auto mb-10">
+          <table class="w-full border border-slate-600/80 rounded-xl overflow-hidden shadow-xl">
+            <thead>
+              <tr class="bg-slate-800/90">
+                <th class="text-left p-4 text-accentLight font-semibold">Concept</th>
+                <th class="text-left p-4 text-accentLight font-semibold">Définition</th>
+                <th class="text-left p-4 text-accentLight font-semibold">Exemple</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-300">
+              <tr class="border-t border-slate-600/80">
+                <td class="p-4 font-medium">Numérisation</td>
+                <td class="p-4">Conversion de supports analogiques en données numériques.</td>
+                <td class="p-4">Numérisation d'un contrat papier en fichier PDF.</td>
+              </tr>
+              <tr class="border-t border-slate-600/80 bg-slate-800/40">
+                <td class="p-4 font-medium">Digitalisation</td>
+                <td class="p-4">Optimisation des processus existants par l'usage du numérique et l'évolution du modèle organisationnel et de la culture d'entreprise.</td>
+                <td class="p-4">Passage à une organisation « sans papier » et plus agile, plus performante et plus innovante. (Exemple : Mise en place de la signature électronique dans les workflows.)</td>
+              </tr>
+              <!-- <tr class="border-t border-slate-600/80">
+                <td class="p-4 font-medium">Transformation</td>
+                <td class="p-4">Évolution du modèle organisationnel et de la culture d'entreprise.</td>
+                <td class="p-4">Passage à une organisation « sans papier » et plus agile, plus performante et plus innovante.</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <div class="reveal-right p-8 rounded-2xl card-glass border border-cyan/20">
+          <h3 class="text-xl font-bold text-accentViolet mb-3">Problématique</h3>
+          <p class="text-slate-200 text-lg">
+            Pourquoi l'introduction de technologies censées faciliter le travail <strong>génère-t-elle fréquemment des réactions de rejet ou de résistance</strong> ? La présente réflexion place l'humain au centre, au-delà des aspects purement techniques.
+          </p>
+        </div>
+      </div>
+      <div class="section-nav">
+        <a href="#titre" class="btn-section">← Précédent</a>
+        <a href="#sondage" class="btn-section">Suivant →</a>
+      </div>
+    </section>
+
+    <!-- Section 2 : Sondage -->
+    <section id="sondage" class="section relative min-h-screen flex flex-col justify-center px-8 md:px-16 py-20 pb-28 bg-gradient-to-b from-slate-900/80 to-dark">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="reveal text-3xl md:text-5xl font-bold mb-2">Sondage en direct</h2>
+        <p class="reveal text-slate-500 text-center mb-8">Point d'originalité — Participation du public</p>
+        <p class="reveal-left text-slate-400 mb-6">Scannez le QR code ci-dessous pour accéder au sondage (Mentimeter).</p>
+        <!-- <p class="reveal-right text-lg text-slate-300 mb-6">Selon vous, quel est le principal frein au déploiement du digital en entreprise ?</p>
+        <ul class="reveal text-slate-400 text-left max-w-sm mx-auto mb-10 space-y-2">
+          <li>• La crainte liée à l'intelligence artificielle</li>
+          <li>• L'insuffisance de formation</li>
+          <li>• L'attachement aux habitudes existantes</li>
+          <li>• La complexité perçue des outils</li>
+        </ul> -->
+        <div class="reveal-scale flex justify-center">
+          <div id="qr-placeholder" class="w-56 h-56 rounded-2xl card-glass border-2 border-dashed border-accent/30 flex items-center justify-center flex-col gap-2 p-4">
+            <img id="qr-image" src="" alt="QR Code Sondage" class="hidden w-full h-full object-contain rounded-lg" />
+            <span class="text-slate-500 text-sm text-center">Placez votre QR code ici.<br /><code class="text-slate-400 text-xs">assets/qr-sondage.png</code></span>
+          </div>
+        </div>
+        <button type="button" id="btn-sondage" class="reveal mt-8 px-8 py-4 rounded-xl bg-gradient-to-r from-accent to-accentDeep hover:opacity-90 text-white font-semibold text-lg shadow-lg shadow-accent/30 transition-all duration-300">
+          Ouvrir le sondage (lien direct)
+        </button>
+      </div>
+      <div class="section-nav">
+        <a href="#introduction" class="btn-section">← Précédent</a>
+        <a href="#courbe" class="btn-section">Suivant →</a>
+      </div>
+    </section>
+
+    <!-- Section 3 : Courbe Kübler-Ross -->
+    <section id="courbe" class="section relative min-h-screen flex flex-col justify-center px-8 md:px-16 py-20 pb-28 bg-dark">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="reveal text-3xl md:text-5xl font-bold text-center mb-2">La courbe réactionnelle face au changement</h2>
+        <p class="reveal text-slate-500 text-center mb-2">Courbe de deuil de Kübler-Ross appliquée au digital</p>
+        <p class="reveal text-slate-500 text-center text-sm mb-10">Survolez ou cliquez sur chaque point pour le détail. Modèle adapté au contexte organisationnel.</p>
+
+        <div class="reveal-scale relative rounded-2xl p-6 md:p-8 card-glass">
+          <div class="curve-container">
+            <svg id="curve-svg" class="w-full curve-svg" viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="curveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#3b82f6" />
+                  <stop offset="50%" style="stop-color:#06b6d4" />
+                  <stop offset="100%" style="stop-color:#8b5cf6" />
+                </linearGradient>
+              </defs>
+              <line x1="60" y1="30" x2="60" y2="210" stroke="#475569" stroke-width="1" />
+              <line x1="60" y1="210" x2="700" y2="210" stroke="#475569" stroke-width="1" />
+              <!-- Bandes colorées inspirées de la courbe fournie -->
+              <rect x="60" y="30" width="180" height="180" fill="#ffe4e6" opacity="0.25" />
+              <rect x="240" y="30" width="160" height="180" fill="#ede9fe" opacity="0.25" />
+              <rect x="400" y="30" width="150" height="180" fill="#fef9c3" opacity="0.25" />
+              <rect x="550" y="30" width="150" height="180" fill="#dcfce7" opacity="0.25" />
+              <text x="30" y="120" fill="#94a3b8" font-size="11" transform="rotate(-90 30 120)">Moral / Performance</text>
+              <text x="380" y="235" fill="#94a3b8" font-size="11">Temps →</text>
+              <path id="curve-path" fill="none" stroke="url(#curveGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                d="M 80 50 Q 200 90 320 170 Q 440 210 520 150 Q 620 80 680 50" />
+              <!-- Points exactement sur la courbe (Bézier) : t=0, 0.4, 1 (seg1), t=0.5, 1 (seg2), t=1 (seg3) -->
+              <g id="curve-points">
+                <circle data-stage="choc" cx="80" cy="50" r="14" class="curve-point cursor-pointer" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="2" />
+                <circle data-stage="deni" cx="176" cy="88" r="14" class="curve-point cursor-pointer" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="2" />
+                <circle data-stage="colere" cx="320" cy="170" r="14" class="curve-point cursor-pointer" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="2" />
+                <circle data-stage="depression" cx="430" cy="185" r="14" class="curve-point cursor-pointer" fill="rgba(139,92,246,0.4)" stroke="#8b5cf6" stroke-width="2" />
+                <circle data-stage="acceptation" cx="520" cy="150" r="14" class="curve-point cursor-pointer" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="2" />
+                <circle data-stage="engagement" cx="680" cy="50" r="14" class="curve-point cursor-pointer" fill="rgba(59,130,246,0.4)" stroke="#3b82f6" stroke-width="2" />
+              </g>
+              <text x="68" y="228" fill="#94a3b8" font-size="10">Choc</text>
+              <text x="150" y="228" fill="#94a3b8" font-size="10">Déni</text>
+              <text x="215" y="228" fill="#94a3b8" font-size="10">Négociation</text>
+              <text x="302" y="228" fill="#94a3b8" font-size="10">Colère</text>
+              <text x="402" y="228" fill="#94a3b8" font-size="10">Dépression</text>
+              <text x="492" y="228" fill="#94a3b8" font-size="10">Acceptation</text>
+              <text x="570" y="228" fill="#94a3b8" font-size="10">Expérimentation</text>
+              <text x="630" y="228" fill="#94a3b8" font-size="10">Décision</text>
+              <text x="652" y="214" fill="#94a3b8" font-size="10">Intégration</text>
+            </svg>
+          </div>
+          <div id="curve-tooltip" class="curve-tooltip hidden absolute z-10 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-sm text-slate-200 shadow-xl max-w-xs"></div>
+        </div>
+
+        <div class="reveal-left mt-10 text-slate-300 space-y-4">
+          <p><!--<strong class="text-white">Analyse :</strong>--> À l’annonce d’un changement (nouveau dispositif numérique, réorganisation), l’individu traverse des phases émotionnelles identifiées par le modèle de Kübler-Ross. Le <strong class="text-accentLight">choc</strong> et le <strong class="text-accentLight">déni</strong> (« cela ne fonctionnera pas », « effet de mode ») cèdent à la <strong class="text-accentLight">colère</strong> et à la <strong class="text-accentLight">peur</strong> (« remplacement par la machine »). La <strong class="text-accentViolet">dépression</strong> correspond au point bas de la courbe — la « vallée du désespoir » — avec une baisse observable de la productivité et de la motivation. Viennent ensuite l’<strong class="text-accentLight">acceptation</strong> (expérimentation de l’outil) et l’<strong class="text-accentLight">engagement</strong> (normalisation des nouvelles pratiques).</p>
+        </div>
+
+        <h3 class="reveal text-xl font-bold text-center mt-12 mb-6">Résistance passive vs résistance active</h3>
+        <div class="reveal-stagger grid md:grid-cols-2 gap-6 mt-6">
+          <div class="p-6 rounded-xl card-glass border border-rose/30">
+            <h4 class="font-semibold text-rose-400 mb-2">Résistance active</h4>
+            <p class="text-slate-400 text-sm mb-2">Expression ouverte d’opposition : critiques, débats, refus d’utilisation. Relativement facile à identifier et à adresser.</p>
+            <p class="text-slate-500 text-xs">Exemple : « Je refuse d’utiliser ce logiciel. »</p>
+          </div>
+          <div class="p-6 rounded-xl card-glass border border-amber/40">
+            <h4 class="font-semibold text-amber-400 mb-2">Résistance passive</h4>
+            <p class="text-slate-400 text-sm mb-2">Inertie, procrastination, retour non déclaré aux anciennes méthodes. Plus difficile à détecter et à gérer.</p>
+            <p class="text-slate-500 text-xs italic">« Le plus grand danger n’est pas celui qui s’oppose ouvertement, mais celui qui ne s’exprime pas et n’adopte pas l’outil. »</p>
+          </div>
+        </div>
+
+        <!-- Cartes empilées : phases de la courbe -->
+        <div class="reveal mt-12">
+          <div class="stack-row flex justify-center w-full">
+            <div class="stack-card card-glass rounded-2xl p-5 flex-1 border border-slate-600/60">
+              <h4 class="text-sm font-semibold text-accentLight mb-1">Phases de résistance</h4>
+              <p class="text-xs text-slate-400 mb-2">Choc, Déni, Colère, Peur / Désengagement.</p>
+              <p class="text-slate-300 text-xs">Baisse initiale du moral et de la productivité, contestation active puis doute sur ses capacités.</p>
+            </div>
+            <div class="stack-card card-glass rounded-2xl flex-1 p-5 border border-slate-600/60">
+              <h4 class="text-sm font-semibold text-cyan-400 mb-1">Phases d’acceptation</h4>
+              <p class="text-xs text-slate-400 mb-2">Exploration, Test, Engagement.</p>
+              <p class="text-slate-300 text-xs">Expérimentations progressives, premières réussites, puis intégration durable des nouveaux usages.</p>
+            </div>
+            
+            <!--<article class="stack-card card-glass rounded-2xl p-5 border border-slate-600/60">
+              <h4 class="text-sm font-semibold text-emerald-400 mb-1">Rôle du manager</h4>
+              <p class="text-xs text-slate-400 mb-2">Adapter son accompagnement à chaque phase.</p>
+              <p class="text-slate-300 text-xs">Informer en amont, écouter les signaux faibles, sécuriser les phases basses et valoriser l’engagement.</p>
+            </article>-->
+          </div>
+        </div>
+      </div>
+      <div class="section-nav">
+        <a href="#sondage" class="btn-section">← Précédent</a>
+        <a href="#causes" class="btn-section">Suivant →</a>
+      </div>
+    </section>
+
+    <!-- Section 4 : Causes de la digitalisation -->
+    <section id="causes" class="section relative min-h-screen flex flex-col justify-center px-8 md:px-16 py-20 pb-28 bg-gradient-to-b from-slate-900/90 to-dark">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="reveal text-3xl md:text-5xl font-bold text-center mb-2">Les causes de la digitalisation</h2>
+        <p class="reveal text-slate-500 text-center mb-4">Pourquoi changer ? — Facteurs externes et contexte VUCA</p>
+
+        <h5 class="reveal text-3xl md:text-3xl font-bold text-center mb-6 mt-8">Les bénéfices externes</h5>
+        <div class="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <article class="vuca-card rounded-2xl p-8 cursor-pointer" data-vuca="volatilite" tabindex="0">
+            <h4 class="text-xl font-bold text-accentLight mb-3">Volatilité</h4>
+            <p class="text-slate-400">Environnement et marchés évoluant de manière rapide et imprévisible.</p>
+          </article>
+          <article class="vuca-card rounded-2xl p-8 cursor-pointer" data-vuca="incertitude" tabindex="0">
+            <h4 class="text-xl font-bold text-cyan-400 mb-3">Incertitude</h4>
+            <p class="text-slate-400">Difficulté à anticiper les conséquences des décisions et des événements.</p>
+          </article>
+          <article class="vuca-card rounded-2xl p-8 cursor-pointer" data-vuca="complexite" tabindex="0">
+            <h4 class="text-xl font-bold text-teal-400 mb-3">Complexité</h4>
+            <p class="text-slate-400">Multiplicité des facteurs et des interconnexions (technologie, organisation, marché).</p>
+          </article>
+          <article class="vuca-card rounded-2xl p-8 cursor-pointer" data-vuca="ambiguite" tabindex="0">
+            <h4 class="text-xl font-bold text-accentViolet mb-3">Ambiguïté</h4>
+            <p class="text-slate-400">Manque de clarté sur les objectifs, les règles ou le sens du changement.</p>
+          </article>
+        </div>
+        <p class="reveal text-slate-400 mb-10"><strong class="text-white">Pression client :</strong> attentes accrues en matière de réactivité, transparence et mobilité. <strong class="text-white">Concurrence :</strong> les organisations qui retardent la digitalisation risquent d’être distancées.</p>
+
+        <h5 class="reveal text-3xl md:text-3xl font-bold text-center mb-2 mt-14">Les bénéfices internes</h5>
+        <p class="reveal text-slate-500 text-center mb-8">Agilité, valeur ajoutée et collaboration</p>
+        <div class="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-xl card-glass border border-emerald/30">
+            <h4 class="font-bold text-emerald-400 mb-2">Agilité</h4>
+            <p class="text-slate-400 text-sm">Décisions fondées sur la donnée (approche data-driven).</p>
+          </div>
+          <div class="p-6 rounded-xl card-glass border border-teal/30">
+            <h4 class="font-bold text-teal-400 mb-2">Valeur ajoutée</h4>
+            <p class="text-slate-400 text-sm">Automatisation des tâches répétitives pour dégager du temps à la créativité et à l’analyse.</p>
+          </div>
+          <div class="p-6 rounded-xl card-glass border border-cyan/30">
+            <h4 class="font-bold text-cyan-400 mb-2">Collaboration</h4>
+            <p class="text-slate-400 text-sm">Réduction des silos entre départements et fluidification des échanges.</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-nav">
+        <a href="#courbe" class="btn-section">← Précédent</a>
+        <a href="#guide" class="btn-section">Suivant →</a>
+      </div>
+    </section>
+
+    <!-- Section 5 : Rôle du management + ADKAR -->
+    <section id="guide" class="section relative min-h-screen flex flex-col justify-center px-8 md:px-16 py-20 pb-28 bg-dark">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="reveal text-3xl md:text-5xl font-bold text-center mb-2">Rôle du management dans la conduite du changement</h2>
+        <p class="reveal text-slate-500 text-center mb-4">Le manager « facilitateur » : du « Command & Control » au rôle de coach</p>
+        <p class="reveal text-slate-500 text-center text-sm mb-12">Accompagnement humain, psychologie organisationnelle et méthode ADKAR</p>
+
+        <div class="reveal-left mb-16 p-8 rounded-2xl card-glass border border-accent/20">
+          <h3 class="text-xl font-bold text-accentLight mb-6">Principes d’accompagnement</h3>
+          <ul class="space-y-4 text-slate-300">
+            <li><strong class="text-white">Donner du sens :</strong> Expliciter la vision et les raisons du changement.</li>
+            <li><strong class="text-white">Accorder le droit à l’erreur :</strong> Indispensable pendant la phase d’apprentissage des nouveaux dispositifs.</li>
+            <li><strong class="text-white">Co-construction :</strong> Associer les collaborateurs au choix ou à la mise en œuvre des outils pour favoriser l’appropriation.</li>
+          </ul>
+        </div>
+
+        <h2 class="reveal text-2xl md:text-4xl font-bold text-center mb-2">La méthode ADKAR</h2>
+        <p class="reveal text-slate-500 text-center mb-8">Outil de gestion du changement — ordre séquentiel des leviers</p>
+        <div class="reveal-stagger adkar-grid grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+          <div class="adkar-block rounded-xl border-2 border-slate-600 overflow-hidden transition-all duration-300" data-adkar="awareness">
+            <button type="button" class="adkar-trigger w-full py-6 px-4 bg-slate-800/80 hover:bg-slate-700 text-2xl font-bold text-accentLight">A</button>
+            <div class="adkar-content hidden px-4 pb-4 pt-0 text-slate-300 text-sm">
+              <strong class="text-white">Awareness (Conscience)</strong> — Prise de conscience de la nécessité du changement.
+            </div>
+          </div>
+          <div class="adkar-block rounded-xl border-2 border-slate-600 overflow-hidden transition-all duration-300" data-adkar="desire">
+            <button type="button" class="adkar-trigger w-full py-6 px-4 bg-slate-800/80 hover:bg-slate-700 text-2xl font-bold text-cyan-400">D</button>
+            <div class="adkar-content hidden px-4 pb-4 pt-0 text-slate-300 text-sm">
+              <strong class="text-white">Desire (Désir)</strong> — Volonté de s’engager dans le changement.
+            </div>
+          </div>
+          <div class="adkar-block rounded-xl border-2 border-slate-600 overflow-hidden transition-all duration-300" data-adkar="knowledge">
+            <button type="button" class="adkar-trigger w-full py-6 px-4 bg-slate-800/80 hover:bg-slate-700 text-2xl font-bold text-teal-400">K</button>
+            <div class="adkar-content hidden px-4 pb-4 pt-0 text-slate-300 text-sm">
+              <strong class="text-white">Knowledge (Savoir)</strong> — Formation et savoir-faire technique.
+            </div>
+          </div>
+          <div class="adkar-block rounded-xl border-2 border-slate-600 overflow-hidden transition-all duration-300" data-adkar="ability">
+            <button type="button" class="adkar-trigger w-full py-6 px-4 bg-slate-800/80 hover:bg-slate-700 text-2xl font-bold text-accentViolet">A</button>
+            <div class="adkar-content hidden px-4 pb-4 pt-0 text-slate-300 text-sm">
+              <strong class="text-white">Ability (Capacité)</strong> — Application concrète dans le quotidien professionnel.
+            </div>
+          </div>
+          <div class="adkar-block rounded-xl border-2 border-slate-600 overflow-hidden transition-all duration-300 col-span-2 md:col-span-1" data-adkar="reinforcement">
+            <button type="button" class="adkar-trigger w-full py-6 px-4 bg-slate-800/80 hover:bg-slate-700 text-2xl font-bold text-emerald-400">R</button>
+            <div class="adkar-content hidden px-4 pb-4 pt-0 text-slate-300 text-sm">
+              <strong class="text-white">Reinforcement (Renforcement)</strong> — Consolidation par la reconnaissance et la célébration des progrès pour éviter les retours en arrière.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-nav">
+        <a href="#causes" class="btn-section">← Précédent</a>
+        <a href="#conclusion" class="btn-section">Suivant →</a>
+      </div>
+    </section>
+
+    <!-- Section 6 : Conclusion -->
+    <section id="conclusion" class="section relative min-h-screen flex flex-col justify-center px-8 md:px-16 py-20 pb-28 bg-gradient-to-br from-slate-900 via-dark to-accentViolet/20">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,rgba(139,92,246,0.12),transparent)] pointer-events-none" aria-hidden="true"></div>
+      <div class="max-w-3xl mx-auto text-center relative z-10">
+        <h2 class="reveal-scale text-3xl md:text-5xl font-bold mb-4">Synthèse &amp; Questions</h2>
+        <p class="reveal text-slate-500 text-center mb-8">Conclusion et clôture</p>
+        <p class="reveal-left text-xl text-slate-200 mb-8 leading-relaxed">
+          La technologie constitue un outil ; le changement reste une aventure humaine.
+        </p>
+        <!--<p class="reveal-right text-slate-400 mb-6">
+          Retour sur le sondage : mettre en lien les résultats initiaux avec les conclusions (par ex. : « La majorité a cité l’attachement aux habitudes, dimension centrale dans les phases de la courbe de Kübler-Ross »).
+        </p>-->
+        <p class="reveal text-slate-300 mb-8 font-large">
+          Merci pour votre attention ❤️
+        </p>
+        <!--<a href="#titre" class="reveal inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-accent to-accentViolet hover:opacity-90 text-white font-semibold text-lg shadow-lg shadow-accent/30 transition-all duration-300">
+          Questions / Réponses
+        </a>-->
+      </div>
+      <div class="section-nav">
+        <a href="#guide" class="btn-section">← Précédent</a>
+        <a href="#titre" class="btn-section">Suivant →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modale Sondage -->
+  <div id="modal-sondage" class="modal fixed inset-0 z-50 hidden" aria-modal="true" role="dialog" aria-labelledby="modal-sondage-title">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" data-close="modal-sondage"></div>
+    <div class="modal-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl max-h-[85vh] bg-slate-800 rounded-2xl border border-slate-600 shadow-2xl overflow-hidden flex flex-col">
+      <div class="flex items-center justify-between p-6 border-b border-slate-600">
+        <h2 id="modal-sondage-title" class="text-xl font-bold">Sondage Direct</h2>
+        <button type="button" id="close-sondage" class="p-2 rounded-lg hover:bg-slate-700 text-slate-400 hover:text-white transition-colors" aria-label="Fermer">✕</button>
+      </div>
+      <div class="p-6 overflow-auto flex-1">
+        <p class="text-slate-400 mb-4">Insérez l’URL de votre sondage Mentimeter ou Slido ci-dessous pour l’afficher en direct.</p>
+        <iframe id="sondage-iframe" title="Sondage Mentimeter" class="w-full h-96 rounded-xl border border-slate-600 bg-slate-900" src="about:blank"></iframe>
+        <p class="text-slate-500 text-sm mt-4">Exemple : https://www.menti.com/… ou https://app.sli.do/…</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modale Rôle du manager (Courbe) -->
+  <div id="modal-manager" class="modal fixed inset-0 z-50 hidden" aria-modal="true" role="dialog" aria-labelledby="modal-manager-title">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" data-close="modal-manager"></div>
+    <div class="modal-content absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg max-h-[85vh] bg-slate-800 rounded-2xl border border-slate-600 shadow-2xl overflow-hidden flex flex-col">
+      <div class="flex items-center justify-between p-6 border-b border-slate-600">
+        <h2 id="modal-manager-title" class="text-xl font-bold">Rôle du manager</h2>
+        <button type="button" id="close-manager" class="p-2 rounded-lg hover:bg-slate-700 text-slate-400 hover:text-white transition-colors" aria-label="Fermer">✕</button>
+      </div>
+      <div id="modal-manager-body" class="p-6 overflow-auto text-slate-300"></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

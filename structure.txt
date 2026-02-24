@@ -1,0 +1,28 @@
+Présentation : Résistances face aux changements digitaux
+
+1. Introduction de la digitalisation (2-3 min)
+   • Diapo 1 : Accroche & Titre
+     Titre : L'Humain au cœur du Code : Comprendre la résistance digitale.
+     Points clés : La technologie avance, l'humain hésite. Enjeu : 80% psychologie, 20% technique.
+   • Diapo 2 : Les trois paliers (Numérisation / Digitalisation / Transformation)
+   • Diapo 3 : Problématique : Pourquoi la technologie déclenche-t-elle souvent une réaction de rejet ?
+
+2. Sondage en direct
+   • Afficher un QR Code (Mentimeter/Slido).
+   • Question : "Selon vous, quel est le plus grand frein au digital en entreprise ?"
+   • Options : La peur de l'IA / Le manque de formation / L'attachement aux habitudes / La complexité technique.
+
+3. La courbe réactionnelle face aux changements (4 min)
+   • Courbe de Kübler-Ross : Choc, Déni, Colère, Peur/Négociation, Dépression (vallée), Acceptation, Engagement.
+   • Résistance Passive vs Active (citation, exemples).
+
+4. Les causes de la digitalisation (2 min)
+   • Facteurs externes : VUCA, pression client, concurrence.
+   • Bénéfices internes : Agilité, valeur ajoutée, collaboration.
+
+5. Rôle du management dans la conduite du changement (4 min)
+   • Manager "Facilitateur" : sens, droit à l'erreur, co-construction.
+   • Méthode ADKAR : Awareness, Desire, Knowledge, Ability, Reinforcement.
+
+6. Conclusion & Clôture (1 min)
+   • Synthèse. Retour sur le sondage. Place aux questions.
